@@ -28,6 +28,8 @@ strace -p pid
   Follow the system calls and signals of a process
 timedatectl status
   Show time and status of NTP server
+tmux -a
+  Attach to the latest running session of tmux; ctrl+b d to detatch
 systemctl start systemd-timesyncd
   Start time syncing service (does both system and hardware clocks)
 uname -a
@@ -73,6 +75,9 @@ mount /dev/sda1 /newmountpoint
 parted /dev/sda unit MB print free
   Displays unused free space for a disk
 umount /newmountpoint
+xxd filename
+xxd -b filename
+  Shows all the hex/binary values in a file
 ```
 ## User Management
 ```
