@@ -204,3 +204,13 @@ man bash
 shopt -s histappend
   Changes history to be append rather than overwrite; preserves between sessions
 ```
+### Video / Screen
+```
+lspci -v | egrep -i --color 'vga|3d|2d'
+  Show current graphics card
+xdpyinfo | grep 'dimensions'
+  Show current resolution
+xrandr | grep '*'
+  Show current resolution
+xrandr --listmonitors
+```
