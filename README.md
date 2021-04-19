@@ -112,6 +112,7 @@ setfacl -m ???
 useradd username
 userdel username
 usermod -aG vboxsf username
+  Add user to group vboxsf (may require re-login)
 visudo
   
 xfce4-session-logout --logout
