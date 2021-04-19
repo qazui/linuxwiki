@@ -71,6 +71,8 @@ hexdump -C filename | less -R
   View binary characters of a file
 hdparm -Tt /dev/sda
 lsblk
+ls -l | awk '{$5=$5*8}1'
+  Show bit size of each file, assuming 8 bits/byte
 mount /dev/sda1 /newmountpoint
 parted /dev/sda unit MB print free
   Displays unused free space for a disk
