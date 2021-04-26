@@ -111,7 +111,6 @@ useradd username
 userdel username
 usermod -aG vboxsf username
 visudo
-  
 xfce4-session-logout --logout
   Must be excuted as the currently logged in user
 xfce4-session-logout --reboot
@@ -201,6 +200,23 @@ help compgen
   Simple built-in command help, more details at bottom of man bash
 man bash
   Check out all the built-in commands from bash
+setxkbmap -option ctrl:nocaps
+  Turn off capslock
+setxkbmap -option
+  Reset capslock
 shopt -s histappend
   Changes history to be append rather than overwrite; preserves between sessions
+xmodmap -e "remove lock = Caps_Lock"
+xmodmap -e "add lock = Caps_Lock"
+echo 'xmodmap -e "remove lock = Caps_Lock"' >> ~/.bash_profile
+```
+### Audio Video Stuff
+```
+amixer set Master 10%+
+  Bump volume up 10%, switch with 10dB-, etc
+amixer set Master unmute
+amixer get Master
+  Check out details of the Master control
+amixer
+  Check out details of all controls
 ```
