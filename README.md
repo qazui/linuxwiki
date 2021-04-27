@@ -71,6 +71,8 @@ hexdump -C filename | less -R
   View binary characters of a file
 hdparm -Tt /dev/sda
 lsblk
+ls -l | awk '{$5=$5*8}1'
+  Show bit size of each file, assuming 8 bits/byte
 mount /dev/sda1 /newmountpoint
 parted /dev/sda unit MB print free
   Displays unused free space for a disk
@@ -110,6 +112,7 @@ setfacl -m ???
 useradd username
 userdel username
 usermod -aG vboxsf username
+  Add user to group vboxsf (may require re-login)
 visudo
 xfce4-session-logout --logout
   Must be excuted as the currently logged in user
@@ -236,4 +239,14 @@ amixer get Master
   Check out details of the Master control
 amixer
   Check out details of all controls
+```
+### Video / Screen
+```
+lspci -v | egrep -i --color 'vga|3d|2d'
+  Show current graphics card
+xdpyinfo | grep 'dimensions'
+  Show current resolution
+xrandr | grep '*'
+  Show current resolution
+xrandr --listmonitors
 ```
