@@ -192,7 +192,7 @@ pacman -S pkgname
 pacman -R pkgname
   Remove a package
 ```
-### Shell Options
+### Shell and Keyboard Options
 ```
 compgen -c
   Show all built-in commands; uses same options as complete built-in command
@@ -206,9 +206,26 @@ setxkbmap -option
   Reset capslock
 shopt -s histappend
   Changes history to be append rather than overwrite; preserves between sessions
+vi ~/.config/i3/config
+  # bindcode 121 exec --no-startup-id amixer set Master toggle
+  # bindcode 122 exec --no-startup-id amixer set Master 5%-
+  # bindcode 123 exec --no-startup-id amixer set Master 5%+
+  bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
+  bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
+  bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master unmute && amixer set Master 5%+
+  # Simple bindings for toggling mute, and bumping up/down volume
+xev
+  x event reader & displayer. Info on keycodes being sent to window from keyboard/mouse
 xmodmap -e "remove lock = Caps_Lock"
 xmodmap -e "add lock = Caps_Lock"
+xmodmap -pke
+  View current keyboard mappings; http://cweiske.de/howto/xmodmap/allinone.html
 echo 'xmodmap -e "remove lock = Caps_Lock"' >> ~/.bash_profile
+  Set up permanent removal of capslock
+xset r rate 180 60
+  Faster keyboard repeat rate (low delay, high Hz)
+xset r rate
+  Reset
 ```
 ### Audio Video Stuff
 ```
