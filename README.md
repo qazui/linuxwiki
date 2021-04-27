@@ -239,11 +239,20 @@ amixer get Master
   Check out details of the Master control
 amixer
   Check out details of all controls
+eog
+  Eye of GNOME for Debian, image viewer. Auto-reloads, smooth zoom.
 lspci -v | egrep -i --color 'vga|3d|2d'
   Show current graphics card
 xdpyinfo | grep 'dimensions'
   Show current resolution
+xrandr
+  Show current monitor information; if disconnected try replugging
 xrandr | grep '*'
   Show current resolution
 xrandr --listmonitors
+  List active connected monitors
+xrandr --output DisplayPort-0 --auto
+  Attempt to activate and use DisplayPort monitor
+xrandr --output DisplayPort-0 --mode 1366x768 --right-of HDMI-A-0
+  Place monitor to the right of HDMI monitor at specific resolution
 ```
