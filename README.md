@@ -230,7 +230,7 @@ xset r rate 180 60
 xset r rate
   Reset
 ```
-### Audio Video Stuff
+### Audio Video
 ```
 amixer set Master 10%+
   Bump volume up 10%, switch with 10dB-, etc
@@ -239,9 +239,6 @@ amixer get Master
   Check out details of the Master control
 amixer
   Check out details of all controls
-```
-### Video / Screen
-```
 lspci -v | egrep -i --color 'vga|3d|2d'
   Show current graphics card
 xdpyinfo | grep 'dimensions'
