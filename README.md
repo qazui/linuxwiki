@@ -1,4 +1,15 @@
 # Linux Common Commands Library
+## Contents
+  - [Kernel & Processes](#kernel-&-processes)
+  - [Network](#network)
+  - [File Management](#file-management)
+  - [User Management](#user-management)
+  - [Desktop Apps](#desktop-apps)
+  - [SSH Stuff](#ssh-stuff)
+  - [Hardware Details](#hardware-details)
+  - [Dependency Management](#dependency-management)
+  - [Shell and Keyboard Options](#shell-and-keyboard-options)
+  - [Audio Video](#audio-video)
 
 ## Kernel & Processes
 ```
@@ -179,7 +190,7 @@ lsblk
 lspci | grep SATA
   May show actual speeds: "SATA III 6Gb/s"
 ```
-### Dependency Management
+## Dependency Management
 ```
 apt install pkgname
 apt update
@@ -195,7 +206,7 @@ pacman -S pkgname
 pacman -R pkgname
   Remove a package
 ```
-### Shell and Keyboard Options
+## Shell and Keyboard Options
 ```
 compgen -c
   Show all built-in commands; uses same options as complete built-in command
@@ -230,7 +241,7 @@ xset r rate 180 60
 xset r rate
   Reset
 ```
-### Audio Video
+## Audio Video
 ```
 amixer set Master 10%+
   Bump volume up 10%, switch with 10dB-, etc
