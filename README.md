@@ -1,6 +1,6 @@
 # Linux Common Commands Library
 ## Contents
-  - [Kernel & Processes](#kernel-&-processes)
+  - [Kernel and Processes](#kernel-and-processes)
   - [Network](#network)
   - [File Management](#file-management)
   - [User Management](#user-management)
@@ -11,7 +11,7 @@
   - [Shell and Keyboard Options](#shell-and-keyboard-options)
   - [Audio Video](#audio-video)
 
-## Kernel & Processes
+## Kernel and Processes
 ```
 bg
   Run any suspended job from jobs in the background
