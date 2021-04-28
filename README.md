@@ -255,4 +255,5 @@ xrandr --output DisplayPort-0 --auto
   Attempt to activate and use DisplayPort monitor
 xrandr --output DisplayPort-0 --mode 1366x768 --right-of HDMI-A-0
   Place monitor to the right of HDMI monitor at specific resolution
+xrandr --output DisplayPort-0 --off
 ```
